@@ -29,23 +29,20 @@ class ViewController: UIViewController {
     }
     
     //MARK: - Private functions
+    //if you want to enable the below code, enable the nameOfSizeClass function also
     private func updateTraitCollection() {
-        /*
-         if you want to enable the below code, enable the nameOfSizeClass function also
-         */
+        debugPrint("Horizontal:\(nameOfSizeClass(traitCollection.horizontalSizeClass))")
+        debugPrint("Vertical:\(nameOfSizeClass(traitCollection.verticalSizeClass))")
         
-        //debugPrint("Horizontal:\(nameOfSizeClass(traitCollection.horizontalSizeClass))")
-        //debugPrint("Vertical:\(nameOfSizeClass(traitCollection.verticalSizeClass))")
-        
-        if traitCollection.horizontalSizeClass == .compact && traitCollection.verticalSizeClass == .regular {
+        if traitCollection.horizontalSizeClass == .compact && traitCollection.verticalSizeClass == .regular{
             button1BottomConstraint.constant = 20
         } else {
-            button1BottomConstraint.constant = (screenSize.height/2)-(button1.frame.height/2)
+            button1BottomConstraint.constant = 200
         }
     }
     
     /* To check which size class you are in enable this code */
-     /*private func nameOfSizeClass(_ sizeClass:UIUserInterfaceSizeClass) -> String {
+     private func nameOfSizeClass(_ sizeClass:UIUserInterfaceSizeClass) -> String {
         switch sizeClass {
         case .regular:
             return "Regular"
@@ -54,6 +51,6 @@ class ViewController: UIViewController {
         default:
             return "UnSpecified"
         }
-    }*/
+    }
 }
 
