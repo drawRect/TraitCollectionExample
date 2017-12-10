@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         if traitCollection.horizontalSizeClass == .compact && traitCollection.verticalSizeClass == .regular{
             button1BottomConstraint.constant = 20
         } else {
-            button1BottomConstraint.constant = 200
+            button1BottomConstraint.constant = 20 * 2
         }
     }
     
